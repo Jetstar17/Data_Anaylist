@@ -1,0 +1,237 @@
+-- 1 Update all salaries
+UPDATE employees SET salary = salary + 5000;
+
+-- 2 Update all bonuses
+UPDATE employees SET bonus = bonus + 1000;
+
+-- 3 Update all performance ratings
+UPDATE employees SET performance_rating = 7;
+
+-- 4 Update all employees to Active (if status exists)
+UPDATE employees SET status = 'Active';
+
+-- 5 Increase salary for IT department
+UPDATE employees 
+SET salary = salary + 8000 
+WHERE department = 'IT';
+
+-- 6 Increase bonus for HR
+UPDATE employees 
+SET bonus = bonus + 2000 
+WHERE department = 'HR';
+
+-- 7 Update city for one employee
+UPDATE employees 
+SET city = 'Ahmedabad' 
+WHERE emp_id = 1;
+
+-- 8 Update email domain
+UPDATE employees 
+SET email = CONCAT(first_name, '@newcompany.com');
+
+-- 9 Update experience for freshers
+UPDATE employees 
+SET experience_years = 1 
+WHERE experience_years = 0;
+
+-- 10 Increase salary for high performers
+UPDATE employees 
+SET salary = salary + 10000 
+WHERE performance_rating >= 9;
+
+-- 11 Reduce salary for low performers
+UPDATE employees 
+SET salary = salary - 2000 
+WHERE performance_rating <= 6;
+
+-- 12 Update gender where missing
+UPDATE employees 
+SET gender = 'Male' 
+WHERE gender IS NULL;
+
+-- 13 Update age for specific names
+UPDATE employees 
+SET age = 30 
+WHERE first_name IN ('Raj', 'Aman');
+
+-- 14 Update department name
+UPDATE employees 
+SET department = 'Tech' 
+WHERE department = 'IT';
+
+-- 15 Update bonus for salary range
+UPDATE employees 
+SET bonus = bonus + 1500 
+WHERE salary BETWEEN 50000 AND 70000;
+
+-- 16 Update performance rating by experience
+UPDATE employees 
+SET performance_rating = 9 
+WHERE experience_years > 8;
+
+-- 17 Update city using LIKE
+UPDATE employees 
+SET city = 'Metro City' 
+WHERE city LIKE '%Delhi%';
+
+-- 18 Update multiple columns
+UPDATE employees 
+SET salary = salary + 3000, bonus = bonus + 1000 
+WHERE department = 'Marketing';
+
+-- 19 Update age + experience
+UPDATE employees 
+SET age = age + 1, experience_years = experience_years + 1;
+
+-- 20 Update hire date
+UPDATE employees 
+SET hire_date = '2022-01-01' 
+WHERE emp_id = 5;
+
+-- 21 Update names starting with A
+UPDATE employees 
+SET bonus = bonus + 2000 
+WHERE first_name LIKE 'A%';
+
+-- 22 Update names ending with 'a'
+UPDATE employees 
+SET salary = salary + 1000 
+WHERE first_name LIKE '%a';
+
+-- 23 Update cities starting with P
+UPDATE employees 
+SET bonus = bonus + 500 
+WHERE city LIKE 'P%';
+
+-- 24 Update employees in multiple cities
+UPDATE employees 
+SET salary = salary + 4000 
+WHERE city IN ('Delhi', 'Mumbai');
+
+-- 25 Update excluding some departments
+UPDATE employees 
+SET bonus = bonus + 1000 
+WHERE department NOT IN ('HR', 'Sales');
+
+-- 26 Update age range
+UPDATE employees 
+SET age = age + 2 
+WHERE age BETWEEN 25 AND 30;
+
+-- 27 Update salary for experience range
+UPDATE employees 
+SET salary = salary + 6000 
+WHERE experience_years BETWEEN 3 AND 7;
+
+-- 28 Update performance rating condition
+UPDATE employees 
+SET performance_rating = 8 
+WHERE performance_rating < 7;
+
+-- 29 Update phone numbers pattern
+UPDATE employees 
+SET phone = CONCAT('91', phone);
+
+-- 30 Update emails ending
+UPDATE employees 
+SET email = REPLACE(email, '@company.com', '@corp.com');
+
+-- 31 Update department + salary
+UPDATE employees 
+SET department = 'Business', salary = salary + 5000 
+WHERE department = 'Sales';
+
+-- 32 Update female employees
+UPDATE employees 
+SET bonus = bonus + 1500 
+WHERE gender = 'Female';
+
+-- 33 Update male employees
+UPDATE employees 
+SET bonus = bonus + 1000 
+WHERE gender = 'Male';
+
+-- 34 Update based on rating and salary
+UPDATE employees 
+SET salary = salary + 7000 
+WHERE performance_rating >= 8 AND salary < 70000;
+
+-- 35 Update based on OR condition
+UPDATE employees 
+SET bonus = bonus + 2000 
+WHERE city = 'Pune' OR city = 'Ahmedabad';
+
+-- 36 Update experience for IT + high rating
+UPDATE employees 
+SET experience_years = experience_years + 1 
+WHERE department = 'IT' AND performance_rating >= 8;
+
+-- 37 Update bonus for low salary OR low rating
+UPDATE employees 
+SET bonus = bonus + 500 
+WHERE salary < 50000 OR performance_rating < 7;
+
+-- 38 Update city and state logic
+UPDATE employees 
+SET city = 'New Delhi' 
+WHERE city = 'Delhi';
+
+-- 39 Update names with underscore pattern
+UPDATE employees 
+SET bonus = bonus + 300 
+WHERE first_name LIKE '_a%';
+
+-- 40 Update exact length names
+UPDATE employees 
+SET salary = salary + 2000 
+WHERE first_name LIKE '_____';
+
+---- 41 Update city
+UPDATE employees
+SET city = 'Delhi'
+WHERE emp_id = 2;
+
+-- 42 Update department
+UPDATE employees
+SET department = 'HR'
+WHERE emp_id = 5;
+
+-- 43 Update job title
+UPDATE employees
+SET job_title = 'Manager'
+WHERE emp_id = 3;
+
+-- 44 Update gender
+UPDATE employees
+SET gender = 'Female'
+WHERE emp_id = 4;
+
+-- 45 Update age
+UPDATE employees
+SET age = 28
+WHERE emp_id = 6;
+
+-- 46 Update phone number
+UPDATE employees
+SET phone = '9999999999'
+WHERE emp_id = 7;
+
+-- 47 Update email
+UPDATE employees
+SET email = 'newmail@company.com'
+WHERE emp_id = 8;
+
+-- 48 Update performance rating
+UPDATE employees
+SET performance_rating = 9
+WHERE emp_id = 9;
+
+-- 49 Update multiple columns
+UPDATE employees
+SET city = 'Mumbai', department = 'Sales'
+WHERE emp_id = 10;
+
+-- 50 Update using simple condition
+UPDATE employees
+SET city = 'Pune'
+WHERE department = 'IT';

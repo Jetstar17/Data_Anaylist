@@ -1,0 +1,24 @@
+-- 11
+SELECT first_name, city 
+FROM employees 
+WHERE city IN ('Delhi', 'Pune', 'Ahmedabad');
+
+-- 12
+SELECT first_name, department 
+FROM employees 
+WHERE department IN ('IT', 'HR', 'Sales');
+
+-- 13
+SELECT first_name, salary 
+FROM employees 
+WHERE salary IN (40000, 50000, 60000);
+
+-- 14
+SELECT first_name, performance_rating 
+FROM employees 
+WHERE performance_rating IN (7, 8, 9);
+
+-- 15
+SELECT first_name, age 
+FROM employees 
+WHERE age IN (25, 30, 35);

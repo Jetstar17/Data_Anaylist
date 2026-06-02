@@ -1,0 +1,38 @@
+-- MIN
+
+SELECT MIN(salary) AS min_salary FROM employees;
+SELECT MIN(age) AS min_age FROM employees;
+SELECT MIN(experience_years) AS min_experience FROM employees;
+
+-- MAX
+
+SELECT MAX(salary) AS max_salary FROM employees;
+SELECT MAX(age) AS max_age FROM employees;
+SELECT MAX(performance_rating) AS max_rating FROM employees;
+
+-- SUM
+
+SELECT SUM(salary) AS total_salary FROM employees;
+SELECT SUM(bonus) AS total_bonus FROM employees;
+SELECT SUM(experience_years) AS total_experience FROM employees;
+
+-- AVG
+
+SELECT AVG(salary) AS avg_salary FROM employees;
+SELECT AVG(age) AS avg_age FROM employees;
+SELECT AVG(performance_rating) AS avg_rating FROM employees;
+
+-- COUNT
+
+SELECT COUNT(emp_id) AS total_employees FROM employees;
+SELECT COUNT(emp_id) AS it_employees FROM employees 
+SELECT COUNT(emp_id) AS female_count FROM employees 
+
+
+
+--  Delete 
+
+
+DELETE FROM employees 
+WHERE emp_id = 1;
+

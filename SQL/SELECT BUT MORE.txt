@@ -1,0 +1,133 @@
+-- 1
+SELECT user_id, first_name, last_name FROM users;
+
+-- 2
+SELECT first_name, email FROM users WHERE gender = 'Male';
+
+-- 3
+SELECT first_name, city FROM users WHERE city = 'Ahmedabad';
+
+-- 4
+SELECT first_name, state FROM users WHERE state = 'Gujarat';
+
+-- 5
+SELECT first_name, status FROM users WHERE status = 'Active';
+
+-- 6
+SELECT first_name, phone FROM users WHERE phone = '9876543210';
+
+-- 7
+SELECT first_name, last_name FROM users WHERE last_name = 'Patel';
+
+-- 8
+SELECT first_name, email FROM users WHERE email = 'amit@mail.com';
+
+-- 9
+SELECT first_name, city, state FROM users WHERE city = 'Delhi';
+
+-- 10
+SELECT first_name, city FROM users WHERE city = 'Mumbai';
+
+
+-- 11
+SELECT first_name, gender, status 
+FROM users 
+WHERE gender = 'Male' AND status = 'Active';
+
+-- 12
+SELECT first_name, city 
+FROM users 
+WHERE city = 'Delhi' OR city = 'Mumbai';
+
+-- 13
+SELECT first_name, state 
+FROM users 
+WHERE state IN ('Gujarat', 'Maharashtra');
+
+-- 14
+SELECT first_name, email 
+FROM users 
+WHERE first_name LIKE 'A%';
+
+-- 15
+SELECT first_name, city 
+FROM users 
+WHERE city NOT IN ('Delhi', 'Mumbai');
+
+-- 16
+SELECT first_name, status 
+FROM users 
+WHERE status != 'Active';
+
+-- 17
+SELECT first_name, city, state 
+FROM users 
+WHERE city = 'Delhi' AND state = 'Delhi';
+
+-- 18
+SELECT first_name, phone 
+FROM users 
+WHERE phone LIKE '9876%';
+
+-- 19
+SELECT first_name, city 
+FROM users 
+WHERE city LIKE '%a%';
+
+-- 20
+SELECT first_name, status 
+FROM users 
+WHERE status = 'Inactive' OR city = 'Pune';
+
+
+
+-- 21
+SELECT first_name, date_of_birth 
+FROM users 
+WHERE date_of_birth > '2000-01-01';
+
+-- 22
+SELECT first_name, date_of_birth 
+FROM users 
+WHERE date_of_birth BETWEEN '1998-01-01' AND '2002-12-31';
+
+-- 23
+SELECT first_name, state, status 
+FROM users 
+WHERE status = 'Active' AND state IN ('Gujarat', 'UP');
+
+-- 24
+SELECT first_name, city 
+FROM users 
+WHERE city LIKE 'B%';
+
+-- 25
+SELECT first_name, last_name 
+FROM users 
+WHERE last_name LIKE 'S%';
+
+-- 26
+SELECT first_name, city, zip_code 
+FROM users 
+WHERE city = 'Delhi' AND zip_code = '110001';
+
+-- 27
+SELECT first_name, state 
+FROM users 
+WHERE NOT state = 'UP';
+
+-- 28
+SELECT first_name, gender 
+FROM users 
+WHERE gender = 'Female' AND city = 'Delhi';
+
+-- 29
+SELECT first_name, email 
+FROM users 
+WHERE email LIKE '%@mail.com';
+
+-- 30
+SELECT first_name, city 
+FROM users 
+WHERE city LIKE '%d%';
+

@@ -1,0 +1,101 @@
+
+
+SELECT employees.first_name, departments.dept_name FROM employees INNER join departments on employees.emp_id= departments.emp_id
+
+
+ELECT employees.first_name, departments.dept_name FROM employees  left join departments  on employees.emp_id= departments.emp_id
+
+
+ELECT employees.first_name, departments.dept_name FROM employees  RIGHT join departments  on employees.emp_id= departments.emp_id
+
+
+
+
+
+left join
+
+
+
+
+SELECT users.username , cities.city_name from users LEFT JOIN cities on users.city_id = cities.city_id
+
+
+SELECT users.username ,  from users LEFT JOIN cities on users.city_id = cities.city_id where cities.city_id is null
+
+SELECT cities.city_name , COUNT(users.user_id) as usercount FROM cities LEFT JOIN users on cities.city_id=users.city_id GROUP by cities.city_name
+
+SELECT users.username , cities.city_name from users LEFT JOIN cities on users.city_id= cities.city_id and cities.city_name = "delhi"
+
+SELECT u.username , c.city_name from users as u LEFT JOIN cities as c on u.city_id= c.city_id 
+
+
+
+
+
+
+
+
+
+
+SELECT projects.ProjectName , clients.ClientName FROM projects RIGHT JOIN clients on projects.ClientID = clients.ClientID
+
+
+SELECT  clients.ClientName FROM projects RIGHT JOIN clients on projects.ClientID = clients.ClientID WHERE projects.ProjectID is null
+
+
+SELECT  clients.ClientName ,COUNT(projects.ProjectID) as totals FROM projects RIGHT JOIN clients on projects.ClientID = clients.ClientID GROUP by clients.ClientName
+
+
+SELECT  clients.ClientName ,projects.ProjectName  FROM projects RIGHT JOIN clients on projects.ClientID = clients.ClientID WHERE clients.ClientName LIKE "tech%"
+
+
+SELECT  clients.ClientName ,projects.ProjectName  FROM projects RIGHT JOIN clients on projects.ClientID = clients.ClientID ORDER by Clients.ClientName desc
+
+
+
+
+
+
+
+
+-
+
+SELECT Products.ProductName, Categories.CategoryName
+FROM Products INNER JOIN Categories
+ON Products.CategoryID = Categories.CategoryID;
+
+
+
+SELECT p.ProductName, p.Price  FROM Products p INNER JOIN Categories c ON p.CategoryID = c.CategoryID
+WHERE c.CategoryName = 'Smartphones' AND p.Price > 75000;
+
+
+
+SELECT c.CategoryName, COUNT(p.ProductID) AS ProductCount FROM Products p INNER JOIN Categories c ON p.CategoryID = c.CategoryID
+GROUP BY c.CategoryName;
+
+
+SELECT p.ProductName, c.CategoryName FROM Products p INNER JOIN Categories c ON p.CategoryID = c.CategoryID
+AND p.Price > 50000;
+
+
+
+
+
+
+
+
+
+SELECT Users.Name, Orders.Product FROM Users INNER JOIN Orders
+ON Users.UserID = Orders.UserID;
+
+ 
+
+SELECT Users.Name, Orders.Product FROM Users INNER JOIN Orders ON Users.UserID = Orders.UserID
+WHERE Orders.Product = 'Mouse';
+
+
+SELECT u.Name, o.Product FROM Users u INNER JOIN Orders o ON u.UserID = o.UserID;
+
+
+

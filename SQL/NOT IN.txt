@@ -1,0 +1,25 @@
+-- 16
+SELECT first_name, city 
+FROM employees 
+WHERE city NOT IN ('Delhi', 'Mumbai');
+
+-- 17
+SELECT first_name, department 
+FROM employees 
+WHERE department NOT IN ('IT', 'HR');
+
+-- 18
+SELECT first_name, salary 
+FROM employees 
+WHERE salary NOT IN (40000, 50000);
+
+-- 19
+SELECT first_name, performance_rating 
+FROM employees 
+WHERE performance_rating NOT IN (6, 7);
+
+-- 20
+SELECT first_name, age 
+FROM employees 
+WHERE age NOT IN (25, 30);
+

@@ -1,0 +1,24 @@
+-- 1 Second letter 'a'
+SELECT first_name 
+FROM employees 
+WHERE first_name LIKE '_a%';
+
+-- 2 Exactly 5-letter names
+SELECT first_name 
+FROM employees 
+WHERE first_name LIKE '_____';
+
+-- 3 Third letter 'n'
+SELECT first_name 
+FROM employees 
+WHERE first_name LIKE '__n%';
+
+-- 4 Ends with 'n' and 5 letters
+SELECT first_name 
+FROM employees 
+WHERE first_name LIKE '____n';
+
+-- 5 Pattern match in city
+SELECT first_name, city 
+FROM employees 
+WHERE city LIKE '_u%';

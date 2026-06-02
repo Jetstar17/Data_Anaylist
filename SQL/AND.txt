@@ -1,0 +1,27 @@
+-- 1
+SELECT first_name, department, salary 
+FROM employees 
+WHERE department = 'IT' AND salary > 60000;
+
+-- 2
+SELECT first_name, city, gender 
+FROM employees 
+WHERE city = 'Delhi' AND gender = 'Female';
+
+-- 3
+SELECT first_name, experience_years 
+FROM employees 
+WHERE experience_years > 5 AND salary > 50000;
+
+-- 4
+SELECT first_name, department, performance_rating 
+FROM employees 
+WHERE department = 'HR' AND performance_rating >= 8;
+
+-- 5
+SELECT first_name, age, bonus 
+FROM employees 
+WHERE age < 30 AND bonus > 4000;
+
+
+

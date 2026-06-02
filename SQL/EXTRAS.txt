@@ -1,0 +1,124 @@
+-- 1 Salary range, lowest to highest
+SELECT first_name, salary 
+FROM employees 
+WHERE salary BETWEEN 50000 AND 70000
+ORDER BY salary;
+
+-- 2 Salary range, highest first
+SELECT first_name, salary 
+FROM employees 
+WHERE salary BETWEEN 50000 AND 70000
+ORDER BY salary DESC;
+
+-- 3 Age range sorted by age
+SELECT first_name, age 
+FROM employees 
+WHERE age BETWEEN 25 AND 30
+ORDER BY age;
+
+-- 4 Experience range sorted descending
+SELECT first_name, experience_years 
+FROM employees 
+WHERE experience_years BETWEEN 3 AND 8
+ORDER BY experience_years DESC;
+
+-- 5 Bonus range sorted
+SELECT first_name, bonus 
+FROM employees 
+WHERE bonus BETWEEN 4000 AND 8000
+ORDER BY bonus;
+
+-- 6 Date range sorted by hire date
+SELECT first_name, hire_date 
+FROM employees 
+WHERE hire_date BETWEEN '2020-01-01' AND '2023-12-31'
+ORDER BY hire_date;
+
+-- 7 IT employees in salary range sorted
+SELECT first_name, department, salary 
+FROM employees 
+WHERE department = 'IT' AND salary BETWEEN 60000 AND 80000
+ORDER BY salary DESC;
+
+-- 8 Female employees age range sorted by name
+SELECT first_name, age 
+FROM employees 
+WHERE gender = 'Female' AND age BETWEEN 24 AND 30
+ORDER BY first_name;
+
+-- 9 High performers in experience range
+SELECT first_name, performance_rating, experience_years 
+FROM employees 
+WHERE performance_rating BETWEEN 8 AND 10 
+AND experience_years BETWEEN 3 AND 10
+ORDER BY performance_rating DESC;
+
+-- 10 City-based range + sorting
+SELECT first_name, city, salary 
+FROM employees 
+WHERE city = 'Delhi' AND salary BETWEEN 50000 AND 80000
+ORDER BY salary;
+
+
+
+
+-- 11 Salary range, lowest to highest
+SELECT first_name, salary 
+FROM employees 
+WHERE salary BETWEEN 50000 AND 70000
+ORDER BY salary;
+
+-- 12 Salary range, highest first
+SELECT first_name, salary 
+FROM employees 
+WHERE salary BETWEEN 50000 AND 70000
+ORDER BY salary DESC;
+
+-- 13 Age range sorted by age
+SELECT first_name, age 
+FROM employees 
+WHERE age BETWEEN 25 AND 30
+ORDER BY age;
+
+-- 14 Experience range sorted descending
+SELECT first_name, experience_years 
+FROM employees 
+WHERE experience_years BETWEEN 3 AND 8
+ORDER BY experience_years DESC;
+
+--15 Bonus range sorted
+SELECT first_name, bonus 
+FROM employees 
+WHERE bonus BETWEEN 4000 AND 8000
+ORDER BY bonus;
+
+-- 16 Date range sorted by hire date
+SELECT first_name, hire_date 
+FROM employees 
+WHERE hire_date BETWEEN '2020-01-01' AND '2023-12-31'
+ORDER BY hire_date;
+
+-- 17 IT employees in salary range sorted
+SELECT first_name, department, salary 
+FROM employees 
+WHERE department = 'IT' AND salary BETWEEN 60000 AND 80000
+ORDER BY salary DESC;
+
+-- 18 Female employees age range sorted by name
+SELECT first_name, age 
+FROM employees 
+WHERE gender = 'Female' AND age BETWEEN 24 AND 30
+ORDER BY first_name;
+
+-- 19 High performers in experience range
+SELECT first_name, performance_rating, experience_years 
+FROM employees 
+WHERE performance_rating BETWEEN 8 AND 10 
+AND experience_years BETWEEN 3 AND 10
+ORDER BY performance_rating DESC;
+
+-- 20 City-based range + sorting
+SELECT first_name, city, salary 
+FROM employees 
+WHERE city = 'Delhi' AND salary BETWEEN 50000 AND 80000
+ORDER BY salary;

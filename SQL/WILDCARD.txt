@@ -1,0 +1,24 @@
+-- 6 Starts with 'A'
+SELECT first_name, email 
+FROM employees 
+WHERE first_name LIKE 'A%';
+
+-- 7 Ends with 'a'
+SELECT first_name 
+FROM employees 
+WHERE first_name LIKE '%a';
+
+-- 8 Contains 'r'
+SELECT first_name 
+FROM employees 
+WHERE first_name LIKE '%r%';
+
+-- 9 Email domain match
+SELECT first_name, email 
+FROM employees 
+WHERE email LIKE '%@company.com';
+
+-- 10 City contains 'o'
+SELECT first_name, city 
+FROM employees 
+WHERE city LIKE '%o%';

@@ -1,0 +1,24 @@
+-- 1 Ascending order (default)
+SELECT first_name, salary 
+FROM employees 
+ORDER BY salary;
+
+-- 2 Descending order
+SELECT first_name, salary 
+FROM employees 
+ORDER BY salary DESC;
+
+-- 3 Order by name
+SELECT first_name, city 
+FROM employees 
+ORDER BY first_name;
+
+-- 4 Order by multiple columns
+SELECT first_name, department, salary 
+FROM employees 
+ORDER BY department, salary DESC;
+
+-- 5 Order by experience
+SELECT first_name, experience_years 
+FROM employees 
+ORDER BY experience_years DESC;

@@ -1,0 +1,24 @@
+-- 6
+SELECT first_name, city 
+FROM employees 
+WHERE city = 'Delhi' OR city = 'Mumbai';
+
+-- 7
+SELECT first_name, department 
+FROM employees 
+WHERE department = 'IT' OR department = 'HR';
+
+-- 8
+SELECT first_name, salary 
+FROM employees 
+WHERE salary > 70000 OR bonus > 8000;
+
+-- 9
+SELECT first_name, gender 
+FROM employees 
+WHERE gender = 'Male' OR city = 'Pune';
+
+-- 10
+SELECT first_name, performance_rating 
+FROM employees 
+WHERE performance_rating >= 9 OR experience_years > 8;

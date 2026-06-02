@@ -1,0 +1,11 @@
+weather=str(input("enter weather"))
+
+if weather == "sunny":
+        print("Go for a hike or visit the beach!")
+elif weather == "rainy":
+        print("Stay indoors and watch a movie.")
+elif weather == "snowy":
+        print("Build a snowman or go skiing!")
+else:
+        print("Check the weather again.")
+

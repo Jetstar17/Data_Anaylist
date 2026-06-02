@@ -1,0 +1,26 @@
+-- 26 Add new column
+ALTER TABLE employees ADD designation VARCHAR(50);
+
+-- 27 Add multiple columns
+ALTER TABLE employees 
+ADD marital_status VARCHAR(20),
+ADD nationality VARCHAR(50);
+
+-- 28 Modify column
+ALTER TABLE employees MODIFY salary DECIMAL(12,2);
+
+-- 29 Rename column
+ALTER TABLE employees RENAME COLUMN phone TO contact_number;
+
+-- 30 Drop column
+ALTER TABLE employees DROP COLUMN nationality;
+
+-- 31 Change column name + type (MySQL older style)
+ALTER TABLE employees CHANGE age emp_age INT;
+
+-- 32 Add default value
+ALTER TABLE employees MODIFY status VARCHAR(20) DEFAULT 'Active';
+
+-- 33 Add NOT NULL constraint
+ALTER TABLE employees MODIFY first_name VARCHAR(50) NOT NULL;
+
