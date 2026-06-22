@@ -1,1 +1,59 @@
+Data Analytics Portfolio Projects
+This repository contains two industry-standard Power BI business intelligence projects designed to showcase end-to-end data modeling, ETL pipelines, and interactive executive reporting.
 
+Project 1: E-Commerce Sales & Inventory Dashboard
+📊 Objective
+To design and implement a dynamic E-Commerce & Inventory Management tracking system. This project mirrors modern supply chain retail environments by connecting operational warehouse stock metrics directly with customer transaction lifecycles.
+
+🏗️ Architecture & Data Modeling
+Data Preparation: Structured a two-tier relational schema using flat sheets created in Microsoft Excel.
+
+Product_Inventory Table: Tracks core product attributes (Product_ID, Product_Name, Brand, Stock_Quantity, Unit_Cost).
+
+Online_Orders Table: Records sales executions (Order_ID, Product_ID, Payment_Method, Order_Amount, Shipping_Status).
+
+Data Model: Established an optimized 1-to-Many (1→∗) relationship in Power BI's Model View via the Product_ID key, enabling strict cross-filtering continuity across discrete tables.
+
+📈 Dashboard Key Features
+Global Performance Matrix: Top-level Card visuals parsing absolute transactional variables (e.g., Total Revenue Generated via Sum of Order_Amount).
+
+Inventory Distribution Analysis: A Clustered Column Chart (Brand vs. Stock_Quantity) mapping immediate warehousing liabilities across manufacturing brands.
+
+Transactional Architecture Split: A specialized Donut chart mapping transaction volumes (Count of Order_ID) over user payment channels (COD, Credit Card, UPI).
+
+Logistics Bottleneck Funnel: A strategic breakdown mapping financial capital (Order_Amount) tightly against logistical fulfillment states (Delivered, Pending, Cancelled).
+
+Interactive Slicers: Integrated structural page filters for Brand and Shipping_Status to evaluate custom operational conditions instantaneously.
+
+Project 2: Amazon Global Sales Performance Analytics Platform
+📊 Objective
+A comprehensive deep-dive enterprise dashboard built to analyze long-term financial health and operational indicators for a large-scale global marketplace ecosystem, as modeled in Screenshot 2026-06-02 213454.jpg.
+
+🗃️ Data & KPI Insights
+The architecture processes multi-year sales ledgers stretching across historical timeline trends (2012 – 2015) to distill core health metrics into high-impact visual components:
+
+Total Revenue: Tracked at $1.28M in gross sales volume.
+
+Net Profits: Aggregated at $194.46K in corporate profit metrics.
+
+Units Moved: Aggregated product tracking at 3K absolute distributed units.
+
+Logistics Failures: Hard metrics pinpointing 500 specific returned items.
+
+📈 Visual Mechanics & Features
+Temporal Trend Matrix: A dedicated time-series pie chart highlighting granular structural changes in annual turnover (e.g., 2014 contributing $327.8K vs. 2012 contributing $316.3K).
+
+Segment-Wise Breakdown: A categorical split visualization tracing consumption behavior trends down across business pillars: Corporate (37.16%), Consumer (32.19%), and Home Office (30.65%).
+
+Geographic Sales Split: A performance-oriented column visualization separating transactional volume across global theater segments (Europe, LATAM, USCA, Asia Pacific, Africa).
+
+Customer Tier Analytics: Dual horizontal bar charts tracking localized customer performance metrics, filtering top-performing assets by overall purchasing margins alongside the Top 5 Profit-Generating Customers (e.g., Christopher, Daniel Griggs).
+
+UI/UX Formatting: Built upon a professional dark-themed layout using custom container blocks and integrated card-style wrappers to preserve dashboard layout hierarchy.
+
+🛠️ Tech Stack & Concepts Demonstrated
+Tools: Power BI Desktop, Microsoft Excel, Power Query Editor.
+
+Data Modeling: Star Schema Design, 1-to-Many Relational Integrity.
+
+BI Engineering: Cross-filtering optimization, Implicit Aggregations (SUM, COUNT), Slicer synchronization, Interface design rules (contrast, visual flow, information chunking).
